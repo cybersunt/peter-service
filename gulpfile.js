@@ -72,7 +72,7 @@ gulp.task('watch', () => {
   gulp.watch('source/*.html', ['html']);
   gulp.watch('source/css/*.css', ['css']);
   gulp.watch('source/img/*', ['images']);
-  gulp.watch('source/**/*.js', ['scripts']);
+  gulp.watch('source/js/*.js', ['scripts']);
 });
 
 gulp.task('default', [
