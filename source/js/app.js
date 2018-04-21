@@ -94,10 +94,17 @@ var SERVICES = [
   }
 ];
 
+Vue.component('progress-bar', {
+  template: `
+    <div class="progress">
+      <div class="progress__bar"></div>
+    </div>
+  `
+});
+
 new Vue({
   el: '#app',
   data: {
     services: SERVICES
   }
 });
-

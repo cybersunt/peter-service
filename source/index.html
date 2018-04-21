@@ -40,10 +40,16 @@
           </div>
         </div>
 
-
         <div v-if="service.details" class="service__more-info">
-          <div class="service__internet">
-            <p>Интернет</p>
+          <div class="service__internet one-service">
+            <div class="one-service__col">
+              <p class="one-service__name">Интернет</p>
+              <p class="one-service__date">02.09.2017 10:21</p>
+            </div>
+            <div class="one-service__col">
+              <p class="one-service__data"><b class="one-service__spent">20</b> из <b>25</b> Гб/30 дн.</p>
+              <progress-bar></progress-bar>
+            </div>
           </div>
         </div>
       </li>
