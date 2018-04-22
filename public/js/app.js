@@ -106,7 +106,7 @@ new Vue({
     showDetails: false
   },
   methods: {
-    toggleDetails: function () {
+    toggleDetails() {
       this.showDetails = !this.showDetails
     }
   },

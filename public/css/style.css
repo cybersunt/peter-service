@@ -498,7 +498,6 @@ body {
 }
 
 .services {
-  width: 550px;
   margin: 0 auto;
   padding-top: 13px;
   background-color: #fff;
@@ -515,7 +514,6 @@ body {
 }
 
 .service {
-  width: 550px;
   position: relative;
 }
 
@@ -636,7 +634,7 @@ body {
 .service__description {
   margin: 0;
   letter-spacing: -0.13px;
-  min-width: 420px;
+  width: calc(100% - 90px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

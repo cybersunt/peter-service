@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
       gp = require('gulp-load-plugins')(),
       browserSync = require('browser-sync').create(),
+      uglify = require('gulp-uglify-es').default,
       importcss = require('postcss-import'),
       autoprefixer = require('autoprefixer'),
       urlcss = require('postcss-url'),
@@ -56,7 +57,7 @@ gulp.task('scripts', function () {
     .pipe(gp.jslint())
     .pipe(gp.plumber())
     .pipe(gulp.dest('./public/js/'))
-    .pipe(gp.uglify())
+    .pipe(uglify())
     .pipe(gp.rename({ suffix: '.min' }))
     .pipe(gulp.dest('./public/js/'))
     .pipe(reload({stream : true}));

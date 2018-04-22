@@ -1,5 +1,5 @@
 {
-  "name": "fanbox",
+  "name": "peter-service",
   "version": "1.0.0",
   "private": true,
   "description": "",
@@ -34,7 +34,7 @@
     "gulp-postcss": "^7.0.0",
     "gulp-posthtml": "^3.0.2",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.1",
     "postcss-import": "^11.0.0",
     "postcss-url": "^7.3.0",
     "stylelint": "8.1.x",
