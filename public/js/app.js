@@ -102,7 +102,8 @@ var services = [
 new Vue({
   el: '#app',
   data: {
-    services: services
+    services: services,
+    showDetails: false
   },
   components: {
     'app-progress-bar': {

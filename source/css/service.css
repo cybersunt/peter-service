@@ -66,18 +66,23 @@
   content: '';
   width: 5px;
   height: 5px;
-  transform: rotate(45deg);
+  transform: rotate(-135deg);
   border-color: transparent;
   border-top: 1px solid #8ea3bb;
   border-left: 1px solid #8ea3bb;
   position: absolute;
-  top: calc(50% - 2px);
+  top: calc(50% - 4px);
   left: calc(50% - 2.5px);
 }
 
 .service__show-more:hover::before,
 .service__show-more:focus::before {
   border-color: #ffffff;
+}
+
+.service__info--show-details .service__show-more::before {
+  transform: rotate(45deg);
+  top: calc(50% - 2px);
 }
 
 .service__name {
@@ -93,6 +98,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 90px);
+  cursor: pointer;
+}
+
+.service__name:disabled {
+  color: #000000;
 }
 
 .service__description {
@@ -154,4 +164,9 @@
   width: calc(100% - 34px);
   margin-left: 34px;
   background-color: #e7eaf2;
+  display: none;
+}
+
+.service__info--show-details + .service__more-info {
+  display: block;
 }

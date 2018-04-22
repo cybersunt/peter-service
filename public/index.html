@@ -21,10 +21,10 @@
                    'service--disabled':service.disabled}"
           v-for="service in services"
         >
-        <div class="service__info">
-          <button v-if="service.details" class="service__show-more" type="button" aria-label="Посмотреть больше информации"></button>
+        <div class="service__info" :class="{'service__info--show-details':showDetails}">
+          <button @click="showDetails = !showDetails" v-if="service.details" class="service__show-more" type="button" aria-label="Посмотреть больше информации"></button>
 
-          <button type="button" class="service__name">{{ service.name }}<sub v-if="service.update" class="service__update">Обновляется</sub></button>
+          <button @click="showDetails = !showDetails" :disabled="!service.details" type="button" class="service__name">{{ service.name }}<sub v-if="service.update" class="service__update">Обновляется</sub></button>
           <div class="service__price">{{ service.price }}</div>
 
 
