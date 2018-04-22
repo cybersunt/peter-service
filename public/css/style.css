@@ -696,11 +696,25 @@ body {
   width: calc(100% - 34px);
   margin-left: 34px;
   background-color: #e7eaf2;
-  display: none;
+  -webkit-transform: translateY(-70px);
+          transform: translateY(-70px);
+  opacity: 0;
+  height: 0;
+  -webkit-transition: all ease-in 0.4s;
+  transition: all ease-in 0.4s;
+  position: relative;
+  z-index: -1;
 }
 
 .service__info--show-details + .service__more-info {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  height: auto;
+  opacity: 1;
   display: block;
+  -webkit-transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.6s;
+  z-index: 0;
 }
 
 .one-service {

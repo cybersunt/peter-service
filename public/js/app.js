@@ -105,6 +105,11 @@ new Vue({
     services: services,
     showDetails: false
   },
+  methods: {
+    toggleDetails: function () {
+      this.showDetails = !this.showDetails
+    }
+  },
   components: {
     'app-progress-bar': {
       template: `
