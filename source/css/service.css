@@ -1,4 +1,5 @@
 .service {
+  width: 550px;
   position: relative;
 }
 
@@ -8,6 +9,10 @@
   padding-left: 34px;
   position: relative;
   margin-bottom: 7px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .service__info::before {
@@ -27,12 +32,6 @@
 
 .service--ordered .service__info::before {
   background-color: #e9cd44;
-}
-
-.service__col {
-  width: max-content;
-  padding-top: 5px;
-  padding-bottom: 10px;
 }
 
 .service__top,
@@ -93,7 +92,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-width: 420px;
+  width: calc(100% - 90px);
 }
 
 .service__description {
@@ -118,15 +117,20 @@
 }
 
 .service__price {
+  text-align: right;
+  width: 90px;
   font-size: 20px;
   line-height: 20px;
 }
 
 .service__price-comment {
+  width: 90px;
   color: #888888;
 }
 
 .service__period {
+  text-align: right;
+  width: 90px;
   color: #888888;
 }
 
@@ -146,12 +150,3 @@
   margin-left: 34px;
   background-color: #e7eaf2;
 }
-
-.service__internet {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 24px;
-  border-bottom: 1px solid #cfd2d9;
-}
-

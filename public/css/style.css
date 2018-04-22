@@ -518,6 +518,7 @@ body {
 }
 
 .service {
+  width: 550px;
   position: relative;
 }
 
@@ -527,6 +528,15 @@ body {
   padding-left: 34px;
   position: relative;
   margin-bottom: 7px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .service__info::before {
@@ -546,14 +556,6 @@ body {
 
 .service--ordered .service__info::before {
   background-color: #e9cd44;
-}
-
-.service__col {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding-top: 5px;
-  padding-bottom: 10px;
 }
 
 .service__top,
@@ -620,7 +622,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-width: 420px;
+  width: calc(100% - 90px);
 }
 
 .service__description {
@@ -645,15 +647,20 @@ body {
 }
 
 .service__price {
+  text-align: right;
+  width: 90px;
   font-size: 20px;
   line-height: 20px;
 }
 
 .service__price-comment {
+  width: 90px;
   color: #888888;
 }
 
 .service__period {
+  text-align: right;
+  width: 90px;
   color: #888888;
 }
 
@@ -678,18 +685,17 @@ body {
   background-color: #e7eaf2;
 }
 
-.service__internet {
+.one-service {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
   padding-right: 24px;
   border-bottom: 1px solid #cfd2d9;
-}
-
-.one-service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -698,24 +704,22 @@ body {
 .one-service__name {
   font-size: 18px;
   line-height: 15px;
-  margin-top: 0;
-  margin-bottom: 4px;
+  margin: 0;
+  width: calc(100% - 170px);
 }
 
 .one-service__date {
   color: #666666;
   margin: 0;
-}
-
-.one-service__col {
-  width: 170px;
+  width: calc(100% - 170px);
 }
 
 .one-service__data {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
   margin: 0;
   color: #666666;
+  width: 170px;
 }
 
 .one-service__data b {
@@ -743,7 +747,7 @@ body {
 
 .action {
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 24px;
   display: -webkit-box;
@@ -784,7 +788,8 @@ body {
 .action__info {
   width: 100%;
   margin: 0;
-  padding: 5px;
+  padding: 10px 5px;
   background-color: #dcdfe8;
   color: #666666;
+  margin-top: 10px;
 }

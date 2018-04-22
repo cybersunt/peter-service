@@ -1,29 +1,33 @@
 .one-service {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 24px;
+  border-bottom: 1px solid #cfd2d9;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .one-service__name {
   font-size: 18px;
   line-height: 15px;
-  margin-top: 0;
-  margin-bottom: 4px;
+  margin: 0;
+  width: calc(100% - 170px);
 }
 
 .one-service__date {
   color: #666666;
   margin: 0;
-}
-
-.one-service__col {
-  width: 170px;
+  width: calc(100% - 170px);
 }
 
 .one-service__data {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
   margin: 0;
   color: #666666;
+  width: 170px;
 }
 
 .one-service__data b {
