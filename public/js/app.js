@@ -1,4 +1,4 @@
-var SERVICES = [
+var services = [
   {
     name: 'SMS–чек',
     type: 'Услуга',
@@ -64,7 +64,12 @@ var SERVICES = [
     disabled: false,
     details: true,
     share: true,
-    shareName: 'День рождения МегаФон'
+    shareName: 'День рождения МегаФон',
+    serviceInfo: {
+      serviceName: 'Интернет',
+      serviceDate: '02.09.2017 10:21',
+      serviceSpent: '<b class="one-service__spent">20</b> из <b>25</b> Гб/30 дн.'
+    }
   },
   {
     name: 'Очень длинное название услуг, которое не помещается',
@@ -94,17 +99,41 @@ var SERVICES = [
   }
 ];
 
-Vue.component('progress-bar', {
-  template: `
-    <div class="progress">
-      <div class="progress__bar"></div>
-    </div>
-  `
-});
-
 new Vue({
   el: '#app',
   data: {
-    services: SERVICES
+    services: services
+  },
+  components: {
+    'app-progress-bar': {
+      template: `
+        <div class="progress">
+          <div class="progress__bar"></div>
+        </div>
+      `
+    },
+    'app-action': {
+      data: function () {
+        return {
+          action: {
+            name: 'День рождения МегаФон',
+            type: 'Акция',
+            description: '02.09.2017 10:21',
+            discount: '30%',
+            discountDesc: 'Скидка на АП',
+            attention: 'После окончания акции продукт отключен не будет'
+          }
+        }
+      },
+      template: `
+      <div class="action">
+        <p class="action__name"><img class="action__icon" src="img/icon-present.svg" alt="День рождения МегаФон" width="10" height="10">{{ action.name }}</p>
+        <div class="action__discount">{{ action.discount }}</div>
+        <p class="action__description"><span class="action__type">{{ action.type }}. </span>{{ action.deßßßscription }}</p>
+        <div class="action__discount-desc">{{ action.discountDesc }}</div>
+        <p class="action__info">{{ action.attention }}</p>
+      </div>
+    `
+   }
   }
 });
