@@ -31,7 +31,7 @@
           <p class="service__description"><span class="service__type"> {{ service.type }} .</span> {{ service.description }}</p>
           <div class="service__period">{{ service.period }}</div>
 
-          <div v-if="service.share" class="service__action-name"> {{ service.shareName }}</div>
+          <div v-if="service.share" class="service__action-name"><img class="service__action-icon" src="img/icon-present.svg" alt="День рождения МегаФон" width="10" height="10"> {{ service.shareName }}</div>
           <div v-if="service.share" class="service__price-comment"> {{ service.priceComment }}</div>
         </div>
 
@@ -40,12 +40,12 @@
           <div class="one-service">
             <p class="one-service__name">Интернет</p>
             <p class="one-service__data"><b class="one-service__spent">20</b> из <b>25</b> Гб/30 дн.</p>
-            <p class="one-service__date">02.09.2017 10:21</p>
+            <p class="one-service__date"><img class="one-service__date-icon" src="img/icon-update.svg" alt="02.09.2017 10:21" width="10" height="8">02.09.2017 10:21</p>
             <progress-bar></progress-bar>
           </div>
 
           <div class="action">
-            <p class="action__name">День рождения МегаФон</p>
+            <p class="action__name"><img class="action__icon" src="img/icon-present.svg" alt="День рождения МегаФон" width="10" height="10">День рождения МегаФон</p>
             <div class="action__discount">30%</div>
             <p class="action__description"><span class="action__type">Акция. </span>Действует с 12.09.2017 по 12.11.2017</p>
             <div class="action__discount-desc">Скидка на АП</div>

@@ -673,6 +673,11 @@ body {
           justify-content: space-between;
 }
 
+.service__action-icon {
+  display: inline-block;
+  margin-right: 1px;
+}
+
 .service--disabled .service__update,
 .service--disabled .service__price,
 .service--disabled .service__period {
@@ -712,6 +717,11 @@ body {
   color: #666666;
   margin: 0;
   width: calc(100% - 170px);
+}
+
+.one-service__date-icon {
+  display: inline-block;
+  margin-right: 3px;
 }
 
 .one-service__data {
@@ -792,4 +802,22 @@ body {
   background-color: #dcdfe8;
   color: #666666;
   margin-top: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.action__info::before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  background: url('../img/icon-info.png') 0 0 no-repeat;
+  top: 11px;
+  left: 10px;
+  z-index: 1;
+}
+
+.action__icon {
+  display: inline-block;
+  margin-right: 5px;
 }

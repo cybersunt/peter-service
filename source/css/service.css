@@ -139,6 +139,11 @@
   justify-content: space-between;
 }
 
+.service__action-icon {
+  display: inline-block;
+  margin-right: 1px;
+}
+
 .service--disabled .service__update,
 .service--disabled .service__price,
 .service--disabled .service__period {

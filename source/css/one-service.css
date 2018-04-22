@@ -22,6 +22,11 @@
   width: calc(100% - 170px);
 }
 
+.one-service__date-icon {
+  display: inline-block;
+  margin-right: 3px;
+}
+
 .one-service__data {
   font-size: 14px;
   line-height: 18px;
