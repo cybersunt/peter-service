@@ -6,7 +6,7 @@
 
 [Демо](https://cybersunt.github.io/peter-service/public) | [Техническое задание](Specification.md)
 
-* **Используемые технологии**: HTML5, CSS3, JS(ES5)
+* **Используемые технологии**: HTML5, CSS3, JS(ES6)
 * **Сетка:** Резиновая
 * **Адаптив:** да
 * **Автоматизация:** Gulp
