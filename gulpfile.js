@@ -53,7 +53,7 @@ gulp.task('images',  function() {
 });
 
 gulp.task('scripts', function () {
-  gulp.src('./source/js/app.js')
+  gulp.src('./source/js/**/*.js')
     .pipe(gp.jslint())
     .pipe(gp.plumber())
     .pipe(gulp.dest('./public/js/'))
