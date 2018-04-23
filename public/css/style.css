@@ -617,6 +617,7 @@ body {
   font-size: 20px;
   line-height: 20px;
   white-space: nowrap;
+  background-color: transparent;
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 90px);
