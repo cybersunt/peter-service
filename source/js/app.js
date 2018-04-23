@@ -1,4 +1,4 @@
-var services = [
+const services = [
   {
     name: 'SMS–чек',
     type: 'Услуга',

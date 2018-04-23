@@ -49,6 +49,7 @@
   height: 13px;
   padding: 0;
   border: 1px solid #b5c7db;
+  background-color: transparent;
   border-radius: 50%;
   position: absolute;
   top: 9px;
@@ -86,7 +87,6 @@
   border: 0;
   outline: 0;
   text-align: left;
-  background-color: transparent;
   font-size: 20px;
   line-height: 20px;
   white-space: nowrap;
