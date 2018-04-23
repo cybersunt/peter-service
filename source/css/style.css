@@ -3,5 +3,6 @@
 @import 'global.css';
 @import 'services.css';
 @import 'service.css';
-@import 'one-service.css';
+@import 'service-details.css';
+@import 'progress.css';
 @import 'action.css';

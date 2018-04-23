@@ -475,7 +475,7 @@ a {
 
 body {
   width: 100%;
-  min-width: 554px; /*потом исправить на 550*/
+  min-width: 550px;
   max-width: 750px;
   padding: 0;
   margin: 0 auto;
@@ -520,7 +520,8 @@ body {
 .service__info {
   padding-top: 7px;
   padding-bottom: 8px;
-  padding-left: 34px;
+  padding-left: 38px;
+  padding-right: 18px;
   position: relative;
   margin-bottom: 7px;
   height: 100%;
@@ -541,7 +542,7 @@ body {
   height: 100%;
   z-index: 1;
   background-color: #8cba00;
-  left: -7px;
+  left: 0;
   top: 0;
 }
 
@@ -575,14 +576,14 @@ body {
   border: 1px solid #b5c7db;
   border-radius: 50%;
   position: absolute;
-  top: 7px;
-  left: 10px;
+  top: 9px;
+  left: 17px;
 }
 
 .service__show-more:hover,
 .service__show-more:focus {
   outline: none;
-  background-color: #b5c7db;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -598,11 +599,6 @@ body {
   position: absolute;
   top: calc(50% - 4px);
   left: calc(50% - 2.5px);
-}
-
-.service__show-more:hover::before,
-.service__show-more:focus::before {
-  border-color: #ffffff;
 }
 
 .service__info--show-details .service__show-more::before {
@@ -691,8 +687,8 @@ body {
 }
 
 .service__more-info {
-  width: calc(100% - 34px);
-  margin-left: 34px;
+  width: calc(100% - 54px);
+  margin-left: 38px;
   background-color: #e7eaf2;
   -webkit-transform: translateY(-70px);
           transform: translateY(-70px);
@@ -715,7 +711,7 @@ body {
   z-index: 0;
 }
 
-.one-service {
+.service-details {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
@@ -731,25 +727,25 @@ body {
           justify-content: space-between;
 }
 
-.one-service__name {
+.service-details__name {
   font-size: 18px;
   line-height: 15px;
   margin: 0;
   width: calc(100% - 170px);
 }
 
-.one-service__date {
+.service-details__date {
   color: #666666;
   margin: 0;
   width: calc(100% - 170px);
 }
 
-.one-service__date-icon {
+.service-details__date-icon {
   display: inline-block;
   margin-right: 3px;
 }
 
-.one-service__data {
+.service-details__data {
   font-size: 14px;
   line-height: 18px;
   margin: 0;
@@ -757,11 +753,11 @@ body {
   width: 170px;
 }
 
-.one-service__data b {
+.service-details__data b {
   font-size: 20px;
 }
 
-.one-service__spent {
+.service-details__spent {
   color: #8cba00;
 }
 
@@ -773,7 +769,6 @@ body {
 }
 
 .progress__bar {
-  width: 130px;
   height: 10px;
   background-color: #8cba00;
   position: absolute;

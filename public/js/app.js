@@ -106,7 +106,7 @@ new Vue({
     showDetails: false
   },
   methods: {
-    toggleDetails() {
+    toggleDetails: function () {
       this.showDetails = !this.showDetails
     }
   },
@@ -114,7 +114,7 @@ new Vue({
     'app-progress-bar': {
       template: `
         <div class="progress">
-          <div class="progress__bar"></div>
+          <div class="progress__bar" style="width: 80%;"></div>
         </div>
       `
     },

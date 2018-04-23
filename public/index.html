@@ -36,10 +36,10 @@
         </div>
 
         <div v-if="service.details" class="service__more-info">
-          <div class="one-service">
-            <p class="one-service__name">{{ service.serviceInfo.serviceName }}</p>
-            <p class="one-service__data" v-html="service.serviceInfo.serviceSpent"></p>
-            <p class="one-service__date"><img class="one-service__date-icon" src="img/icon-update.svg" alt="02.09.2017 10:21" width="10" height="8">{{ service.serviceInfo.serviceDate }}</p>
+          <div class="service-details">
+            <p class="service-details__name">{{ service.serviceInfo.serviceName }}</p>
+            <p class="service-details__data" v-html="service.serviceInfo.serviceSpent"></p>
+            <p class="service-details__date"><img class="service-details__date-icon" src="img/icon-update.svg" alt="02.09.2017 10:21" width="10" height="8">{{ service.serviceInfo.serviceDate }}</p>
 
             <app-progress-bar></app-progress-bar>
           </div>

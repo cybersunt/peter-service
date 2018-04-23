@@ -1,4 +1,4 @@
-.one-service {
+.service-details {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
@@ -9,25 +9,25 @@
   justify-content: space-between;
 }
 
-.one-service__name {
+.service-details__name {
   font-size: 18px;
   line-height: 15px;
   margin: 0;
   width: calc(100% - 170px);
 }
 
-.one-service__date {
+.service-details__date {
   color: #666666;
   margin: 0;
   width: calc(100% - 170px);
 }
 
-.one-service__date-icon {
+.service-details__date-icon {
   display: inline-block;
   margin-right: 3px;
 }
 
-.one-service__data {
+.service-details__data {
   font-size: 14px;
   line-height: 18px;
   margin: 0;
@@ -35,25 +35,10 @@
   width: 170px;
 }
 
-.one-service__data b {
+.service-details__data b {
   font-size: 20px;
 }
 
-.one-service__spent {
+.service-details__spent {
   color: #8cba00;
-}
-
-.progress {
-  width: 170px;
-  height: 10px;
-  background-color: #cfd2d9;
-  position: relative;
-}
-
-.progress__bar {
-  width: 130px;
-  height: 10px;
-  background-color: #8cba00;
-  position: absolute;
-  top: ;
 }
