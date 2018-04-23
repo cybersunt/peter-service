@@ -106,7 +106,7 @@ new Vue({
     showDetails: false
   },
   methods: {
-    toggleDetails: function () {
+    toggleDetails() {
       this.showDetails = !this.showDetails
     }
   },
@@ -119,7 +119,7 @@ new Vue({
       `
     },
     'app-action': {
-      data: function () {
+      data() {
         return {
           action: {
             name: 'День рождения МегаФон',
