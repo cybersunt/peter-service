@@ -122,7 +122,7 @@ new Vue({
         };
       },
 
-      template: '\n      <div class="action">\n        <p class="action__name"><img class="action__icon" src="img/icon-present.svg" alt="\u0414\u0435\u043D\u044C \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u041C\u0435\u0433\u0430\u0424\u043E\u043D" width="10" height="10">{{ action.name }}</p>\n        <div class="action__discount">{{ action.discount }}</div>\n        <p class="action__description"><span class="action__type">{{ action.type }}. </span>{{ action.description }}</p>\n        <div class="action__discount-desc">{{ action.discountDesc }}</div>\n        <p class="action__info">{{ action.attention }}</p>\n      </div>\n    '
+      template: '\n      <div class="action">\n        <p class="action__name"><img class="action__icon" src="img/icon-present.svg" :alt="action.name" width="10" height="10">{{ action.name }}</p>\n        <div class="action__discount">{{ action.discount }}</div>\n        <p class="action__description"><span class="action__type">{{ action.type }}. </span>{{ action.description }}</p>\n        <div class="action__discount-desc">{{ action.discountDesc }}</div>\n        <p class="action__info">{{ action.attention }}</p>\n      </div>\n    '
     }
   }
 });

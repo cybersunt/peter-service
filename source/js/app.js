@@ -133,7 +133,7 @@ new Vue({
       },
       template: `
       <div class="action">
-        <p class="action__name"><img class="action__icon" src="img/icon-present.svg" alt="День рождения МегаФон" width="10" height="10">{{ action.name }}</p>
+        <p class="action__name"><img class="action__icon" src="img/icon-present.svg" :alt="action.name" width="10" height="10">{{ action.name }}</p>
         <div class="action__discount">{{ action.discount }}</div>
         <p class="action__description"><span class="action__type">{{ action.type }}. </span>{{ action.description }}</p>
         <div class="action__discount-desc">{{ action.discountDesc }}</div>

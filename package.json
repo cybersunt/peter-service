@@ -18,8 +18,7 @@
     "es6-promise": "^4.2.4",
     "express": "^4.16.2",
     "gulp": "^3.9.1",
-    "gulp-pug": "^3.0.4",
-    "remove-svg-properties": "^0.3.3"
+    "vue": "^2.5.16"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.1",
