@@ -68,7 +68,7 @@ var services = [
     serviceInfo: {
       serviceName: 'Интернет',
       serviceDate: '02.09.2017 10:21',
-      serviceSpent: '<b class="one-service__spent">20</b> из <b>25</b> Гб/30 дн.'
+      serviceSpent: '<b class="service-details__spent">20</b> из <b>25</b> Гб/30 дн.'
     }
   },
   {
