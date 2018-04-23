@@ -598,14 +598,17 @@ body {
   border-top: 1px solid #8ea3bb;
   border-left: 1px solid #8ea3bb;
   position: absolute;
-  top: calc(50% - 4px);
-  left: calc(50% - 2.5px);
+  top: 50%;
+  left: 50%;
+  margin-top: -4px;
+  margin-left: -2.5px;
 }
 
 .service__info--show-details .service__show-more::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: calc(50% - 2px);
+  top: 50%;
+  margin-top: -2px;
 }
 
 .service__name {
@@ -635,6 +638,11 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.service--disabled .service__name,
+.service--disabled .description {
+  width: 100%;
 }
 
 .service__update {

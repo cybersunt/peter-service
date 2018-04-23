@@ -5,6 +5,7 @@ const gulp = require('gulp'),
       importcss = require('postcss-import'),
       autoprefixer = require('autoprefixer'),
       urlcss = require('postcss-url'),
+      del = require('del'),
       reload = browserSync.reload;
 
 // server
@@ -52,10 +53,24 @@ gulp.task('images',  function() {
     .pipe(reload({stream : true}));
 });
 
-gulp.task('scripts', function () {
-  gulp.src('./source/js/**/*.js')
+gulp.task('scripts-lib', function () {
+  gulp.src('./source/js/lib/*.js')
     .pipe(gp.jslint())
     .pipe(gp.plumber())
+    .pipe(gulp.dest('./public/js/'))
+    .pipe(uglify())
+    .pipe(gp.rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./public/js/lib/'))
+    .pipe(reload({stream : true}));
+});
+
+gulp.task('scripts', function () {
+  gulp.src('./source/js/app.js')
+    .pipe(gp.jslint())
+    .pipe(gp.plumber())
+    .pipe(gp.babel({
+      presets: ['env']
+    }))
     .pipe(gulp.dest('./public/js/'))
     .pipe(uglify())
     .pipe(gp.rename({ suffix: '.min' }))
@@ -67,6 +82,20 @@ gulp.task('fonts', function() {
   return gulp.src('./source/fonts/**/*')
   .pipe(gulp.dest('./public/fonts'));
 });
+
+gulp.task('clean', function() {
+  return del('.public');
+});
+
+gulp.task('build', [
+  'clean',
+  'fonts',
+  'css',
+  'html',
+  'scripts-lib',
+  'scripts',
+  'images'
+  ]);
 
 gulp.task('watch', () => {
   gulp.watch('source/fonts/*', ['fonts']);
@@ -80,6 +109,7 @@ gulp.task('default', [
   'fonts',
   'css',
   'html',
+  'scripts-lib',
   'scripts',
   'images',
   'server', 'watch'
