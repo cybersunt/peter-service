@@ -1,7 +1,7 @@
 'use strict';
 
 var services = [{
-  name: 'SMS–чек',
+  name: 'SMS-чек',
   type: 'Услуга',
   description: 'Подключено с 12.09.2017 10:21 по 12.11.2017 10:21',
   price: '1.00',

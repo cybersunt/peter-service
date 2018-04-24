@@ -22,17 +22,22 @@
         <div class="service__info" :class="{'service__info--show-details':showDetails}">
           <button @click="toggleDetails" v-if="service.details" class="service__show-more" type="button" aria-label="Посмотреть больше информации"></button>
 
-          <button @click="toggleDetails" :disabled="!service.details" type="button" class="service__name">{{ service.name }}<sub v-if="service.update" class="service__update">Обновляется</sub></button>
-          <div class="service__price">{{ service.price }}</div>
+          <div class="service__row">
+            <button @click="toggleDetails" :disabled="!service.details" type="button" class="service__name">{{ service.name }} </button>
+            <sub v-if="service.update" class="service__update">Обновляется</sub>
 
+            <div class="service__price">{{ service.price }}</div>
+          </div>
 
-          <p class="service__description"><span class="service__type"> {{ service.type }} .</span> {{ service.description }}</p>
+          <p class="service__description"><span class="service__type"> {{ service.type }}. </span> {{ service.description }}</p>
           <div class="service__period">{{ service.period }}</div>
 
-          <div v-if="service.share" class="service__action-name"><img class="service__action-icon" src="img/icon-present.svg" alt="День рождения МегаФон" width="10" height="10"> {{ service.shareName }}</div>
-          <div v-if="service.share" class="service__price-comment"> {{ service.priceComment }}</div>
-        </div>
+          <div v-if="service.share" class="service__row">
+            <div class="service__action-name"><img class="service__action-icon" src="img/icon-present.svg" alt="День рождения МегаФон" width="10" height="10"> {{ service.shareName }}</div>
+            <div class="service__price-comment"> {{ service.priceComment }}</div>
+          </div>
 
+        </div>
         <div v-if="service.details" class="service__more-info">
           <div class="service-details">
             <p class="service-details__name">{{ service.serviceInfo.serviceName }}</p>
