@@ -19,7 +19,8 @@
       <li class="services__item service"
           :class="{'service--ordered':service.ordered,
                    'service--disabled':service.disabled}" v-for="service in services">
-        <div class="service__info" :class="{'service__info--show-details':showDetails}">
+        <di
+        v class="service__info" :class="{'service__info--show-details':showDetails}">
           <button @click="toggleDetails" v-if="service.details" class="service__show-more" type="button" aria-label="Посмотреть больше информации"></button>
 
           <div class="service__row">
@@ -31,6 +32,7 @@
 
           <p class="service__description"><span class="service__type"> {{ service.type }}. </span> {{ service.description }}</p>
           <div class="service__period">{{ service.period }}</div>
+        </div>
 
           <div v-if="service.share" class="service__row">
             <div class="service__action-name"><img class="service__action-icon" src="img/icon-present.svg" alt="День рождения МегаФон" width="10" height="10"> {{ service.shareName }}</div>
