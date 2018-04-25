@@ -177,18 +177,9 @@
   width: calc(100% - 54px);
   margin-left: 38px;
   background-color: #e7eaf2;
-  transform: translateY(-55px);
-  opacity: 0;
-  height: 0;
-  position: relative;
-  z-index: -1;
+  display: none;
 }
 
 .service__info--show-details + .service__more-info {
-  transform: translateY(0);
-  height: auto;
-  opacity: 1;
   display: block;
-  transition-duration: 0.6s;
-  z-index: 0;
 }
