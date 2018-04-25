@@ -29,8 +29,10 @@
             <div class="service__price">{{ service.price }}</div>
           </div>
 
-          <p class="service__description"><span class="service__type"> {{ service.type }}. </span> {{ service.description }}</p>
-          <div class="service__period">{{ service.period }}</div>
+          <div class="service__row">
+            <p class="service__description"><span class="service__type"> {{ service.type }}. </span> {{ service.description }}</p>
+            <div class="service__period">{{ service.period }}</div>
+          </div>
 
           <div v-if="service.share" class="service__row">
             <div class="service__action-name"><img class="service__action-icon" src="img/icon-present.svg" alt="День рождения МегаФон" width="10" height="10"> {{ service.shareName }}</div>
