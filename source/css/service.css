@@ -117,6 +117,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  align-self: flex-start;
 }
 
 .service__action-icon {

@@ -652,6 +652,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .service__action-icon {
