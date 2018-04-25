@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
   <!-- SEO Задание тега Title -->
 	<title>Тестовое задание Peter-Service</title>
-  <meta name="description" content="Тестовое задание Peter-Service на вакансию-html верстальщика">
+  <meta name="description" content="Тестовое задание Peter-Service на вакансию html-верстальщика">
   <!-- Задание тега Viewport для адаптивного отображения страницы -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
@@ -19,11 +19,11 @@
       <li class="services__item service"
           :class="{'service--ordered':service.ordered,
                    'service--disabled':service.disabled}" v-for="service in services">
-        <div class="service__info" :class="{'service__info--show-details':showDetails}">
-          <button @click="toggleDetails" v-if="service.details" class="service__show-more" type="button" aria-label="Посмотреть больше информации"></button>
+        <div class="service__info" :class="{'service__info--show-details':service.showDetails}">
+          <button @click="service.showDetails = !service.showDetails" v-if="service.details" class="service__show-more" type="button" aria-label="Посмотреть больше информации"></button>
 
           <div class="service__row">
-            <button @click="toggleDetails" :disabled="!service.details" type="button" class="service__name">{{ service.name }} </button>
+            <button @click="service.showDetails = !service.showDetails" :disabled="!service.details" type="button" class="service__name">{{ service.name }} </button>
             <sub v-if="service.update" class="service__update">Обновляется</sub>
 
             <div class="service__price">{{ service.price }}</div>

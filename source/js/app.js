@@ -10,7 +10,8 @@ const services = [
     connected: true,
     disabled: false,
     details: false,
-    share: false
+    showDetails: false,
+    share: false,
   },
   {
     name: 'Автопродление',
@@ -23,6 +24,7 @@ const services = [
     connected: false,
     disabled: true,
     details: false,
+    showDetails: false,
     share: false
   },
   {
@@ -36,6 +38,7 @@ const services = [
     connected: false,
     disabled: false,
     details: false,
+    showDetails: false,
     share: false
   },
   {
@@ -49,6 +52,7 @@ const services = [
     connected: false,
     disabled: false,
     details: false,
+    showDetails: false,
     share: false
   },
   {
@@ -63,6 +67,7 @@ const services = [
     connected: true,
     disabled: false,
     details: true,
+    showDetails: false,
     share: true,
     shareName: 'День рождения МегаФон',
     serviceInfo: {
@@ -82,6 +87,7 @@ const services = [
     connected: true,
     disabled: false,
     details: false,
+    showDetails: false,
     share: false
   },
   {
@@ -95,6 +101,7 @@ const services = [
     connected: true,
     disabled: false,
     details: false,
+    showDetails: false,
     share: false
   }
 ];
@@ -102,13 +109,7 @@ const services = [
 new Vue({
   el: '#app',
   data: {
-    services: services,
-    showDetails: false
-  },
-  methods: {
-    toggleDetails(){
-      this.showDetails = !this.showDetails
-    }
+    services: services
   },
   components: {
     'app-progress-bar': {
@@ -133,10 +134,14 @@ new Vue({
       },
       template: `
       <div class="action">
-        <p class="action__name"><img class="action__icon" src="img/icon-present.svg" :alt="action.name" width="10" height="10">{{ action.name }}</p>
-        <div class="action__discount">{{ action.discount }}</div>
-        <p class="action__description"><span class="action__type">{{ action.type }}. </span>{{ action.description }}</p>
-        <div class="action__discount-desc">{{ action.discountDesc }}</div>
+        <div class="action__row">
+          <p class="action__name"><img class="action__icon" src="img/icon-present.svg" :alt="action.name" width="10" height="10">{{ action.name }}</p>
+          <div class="action__discount">{{ action.discount }}</div>
+        </div>
+        <div class="action__row">
+          <p class="action__description"><span class="action__type">{{ action.type }}. </span>{{ action.description }}</p>
+          <div class="action__discount-desc">{{ action.discountDesc }}</div>
+        </div>
         <p class="action__info">{{ action.attention }}</p>
       </div>
     `

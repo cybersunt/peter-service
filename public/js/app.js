@@ -11,6 +11,7 @@ var services = [{
   connected: true,
   disabled: false,
   details: false,
+  showDetails: false,
   share: false
 }, {
   name: 'Автопродление',
@@ -23,6 +24,7 @@ var services = [{
   connected: false,
   disabled: true,
   details: false,
+  showDetails: false,
   share: false
 }, {
   name: 'В Абхазии как дома',
@@ -35,6 +37,7 @@ var services = [{
   connected: false,
   disabled: false,
   details: false,
+  showDetails: false,
   share: false
 }, {
   name: 'Живой баланс',
@@ -47,6 +50,7 @@ var services = [{
   connected: false,
   disabled: false,
   details: false,
+  showDetails: false,
   share: false
 }, {
   name: 'Интернет M',
@@ -60,6 +64,7 @@ var services = [{
   connected: true,
   disabled: false,
   details: true,
+  showDetails: false,
   share: true,
   shareName: 'День рождения МегаФон',
   serviceInfo: {
@@ -78,6 +83,7 @@ var services = [{
   connected: true,
   disabled: false,
   details: false,
+  showDetails: false,
   share: false
 }, {
   name: 'СуперАОН',
@@ -90,19 +96,14 @@ var services = [{
   connected: true,
   disabled: false,
   details: false,
+  showDetails: false,
   share: false
 }];
 
 new Vue({
   el: '#app',
   data: {
-    services: services,
-    showDetails: false
-  },
-  methods: {
-    toggleDetails: function toggleDetails() {
-      this.showDetails = !this.showDetails;
-    }
+    services: services
   },
   components: {
     'app-progress-bar': {
@@ -122,7 +123,7 @@ new Vue({
         };
       },
 
-      template: '\n      <div class="action">\n        <p class="action__name"><img class="action__icon" src="img/icon-present.svg" :alt="action.name" width="10" height="10">{{ action.name }}</p>\n        <div class="action__discount">{{ action.discount }}</div>\n        <p class="action__description"><span class="action__type">{{ action.type }}. </span>{{ action.description }}</p>\n        <div class="action__discount-desc">{{ action.discountDesc }}</div>\n        <p class="action__info">{{ action.attention }}</p>\n      </div>\n    '
+      template: '\n      <div class="action">\n        <div class="action__row">\n          <p class="action__name"><img class="action__icon" src="img/icon-present.svg" :alt="action.name" width="10" height="10">{{ action.name }}</p>\n          <div class="action__discount">{{ action.discount }}</div>\n        </div>\n        <div class="action__row">\n          <p class="action__description"><span class="action__type">{{ action.type }}. </span>{{ action.description }}</p>\n          <div class="action__discount-desc">{{ action.discountDesc }}</div>\n        </div>\n        <p class="action__info">{{ action.attention }}</p>\n      </div>\n    '
     }
   }
 });

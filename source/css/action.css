@@ -3,23 +3,24 @@
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 24px;
+}
+
+.action__row {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .action__name {
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-  width: calc(100% - 90px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .action__description {
-  width: calc(100% - 90px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -29,6 +30,9 @@
 .action__discount {
   font-size: 16px;
   line-height: 15px;
+  flex-basis: 40px;
+  flex-grow: 1;
+  text-align: right;
 }
 
 .action__type {
@@ -37,6 +41,9 @@
 
 .action__discount-desc {
   color: #666666;
+  flex-basis: 100px;
+  flex-grow: 1;
+  text-align: right;
 }
 
 .action__info {
